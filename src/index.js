@@ -14,7 +14,7 @@ const excute = async () => {
     };
     const response = await axios.post(SLACK_URL, payload);
 
-    if (response !== 200) {
+    if (response.status !== 200) {
       throw new Error("something heppend");
     }
   } catch (error) {
