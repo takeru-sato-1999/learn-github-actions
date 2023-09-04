@@ -1,8 +1,12 @@
 const axios = require("axios");
+require("dotenv").config();
 
 const SLACK_URL = process.env.SLACK_WEBHOOK_URL;
 
 const excute = async () => {
+  if (!SLACK_URL) {
+    throw new Error("Slackのurlを設定してください");
+  }
   try {
     const text = "ハローワールド、開発学習チャンネル";
     const payload = {
