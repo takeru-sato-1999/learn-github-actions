@@ -1,4 +1,4 @@
-name: 開発Slackにメッセージを送る
+name: テストSlackにメッセージを送る
 
 on:
   workflow_dispatch:
