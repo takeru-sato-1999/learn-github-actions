@@ -20,4 +20,5 @@ jobs:
       - name: Slackにメッセージを送信
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-        run: npm run test -- ${{github.run_id}} ${{github.action_path}} ${{github.job}} ${{github.path}} ${{github.repositoryUrl}} ${{github.repository}} ${{github.run_number}}
+          WORKFLOW_NAME: テストSlackにメッセージを送る
+        run: npm run test -- 'https://github.com/${{ github.repository}}/actions/runs/${{ github.run_id}}'
