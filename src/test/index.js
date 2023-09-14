@@ -8,6 +8,7 @@ const excute = async () => {
     throw new Error("Slackのurlを設定してください");
   }
   try {
+    console.log(process.argv);
     const text = "テストです、開発学習チャンネル";
     const payload = {
       text,
